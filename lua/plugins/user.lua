@@ -1,4 +1,4 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- You can also add or configure plugins by creating files in this `plugins/` folder
 -- Here are some examples:
@@ -40,7 +40,7 @@ return {
   },
 
   -- You can disable default plugins as follows:
-  { "max397574/better-escape.nvim", enabled = false },
+  { "max397574/better-escape.nvim", enabled = true },
 
   -- You can also easily customize additional setup of plugins that is outside of the plugin's setup call
   {
@@ -81,5 +81,55 @@ return {
         Rule("a", "a", "-vim")
       )
     end,
+  },
+  {
+    "j-hui/fidget.nvim",
+    tag = "legacy",
+    event = "LspAttach",
+    opts = {},
+  },
+  {
+    "fladson/vim-kitty",
+    ft = "kitty.conf",
+    event = "VeryLazy",
+  },
+  {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    opts = {},
+  },
+  {
+    "roobert/surround-ui.nvim",
+    event = "VeryLazy",
+    dependencies = {
+      "kylechui/nvim-surround",
+      "folke/which-key.nvim",
+    },
+    opts = {
+      root_key = "S",
+    },
+  },
+  {
+    "sustech-data/wildfire.nvim",
+    event = "VeryLazy",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    opts = {},
+    -- config = function() require("wildfire").setup() end,
+  },
+  {
+    "folke/flash.nvim",
+    opts = {
+      modes = {
+        char = { enabled = false },
+      },
+    },
+    keys = {
+      { "<leader><leader>", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
+      { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
+      -- { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
+      -- { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
+      -- { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
+    },
   },
 }
