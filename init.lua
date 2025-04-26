@@ -15,12 +15,5 @@ if not pcall(require, "lazy") then
   vim.cmd.quit()
 end
 
--- This script is for neovide
-if vim.g.neovide then
-  -- Put anything you want to happen only in Neovide here
-  vim.o.guifont = "MesloLGS NF:h12"
-  vim.g.neovide_cursor_vfx_mode = "torpedo"
-end
-
 require "lazy_setup"
 require "polish"
