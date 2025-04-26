@@ -1,6 +1,6 @@
 # AstroNvim config
 
-**NOTE:** This is for AstroNvim v4+
+**NOTE:** This is for AstroNvim v5+
 
 ## 🛠️ Installation
 
@@ -16,7 +16,7 @@ mv ~/.cache/nvim ~/.cache/nvim.bak
 #### Clone the repository
 
 ```shell
-git clone https://github.com/oomeow/AstroNvim_config_v4.git ~/.config/nvim
+git clone https://github.com/oomeow/astronvim_config.git ~/.config/nvim
 ```
 
 #### Start Neovim
