@@ -8,9 +8,9 @@
 
 ```shell
 mv ~/.config/nvim ~/.config/nvim.bak
-mv ~/.local/share/nvim ~/.local/share/nvim.bak
-mv ~/.local/state/nvim ~/.local/state/nvim.bak
-mv ~/.cache/nvim ~/.cache/nvim.bak
+rm -rf ~/.local/share/nvim
+rm -rf ~/.local/state/nvim
+rm -rf ~/.cache/nvim
 ```
 
 #### Clone the repository
@@ -18,6 +18,10 @@ mv ~/.cache/nvim ~/.cache/nvim.bak
 ```shell
 git clone https://github.com/oomeow/astronvim_config.git ~/.config/nvim
 ```
+
+#### clipboard
+
+In wayland, you should install `wl-clipboard`
 
 #### Start Neovim
 

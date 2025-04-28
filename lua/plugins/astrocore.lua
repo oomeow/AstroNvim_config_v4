@@ -9,7 +9,7 @@
 return {
   "AstroNvim/astrocore",
   ---@type AstroCoreOpts
-    opts = {
+  opts = {
     -- Configure core features of AstroNvim
     features = {
       large_buf = { size = 1024 * 256, lines = 10000 }, -- set global limits for large files for disabling features like treesitter
@@ -90,8 +90,8 @@ return {
         ["<leader>bp"] = { "<cmd>BufferLinePick<cr>", desc = "Pick buffer" },
 
         -- Clipboard
-        ["<leader>yy"] = { '"+yy' },
-        ["<leader>p"] = { '"+p' },
+        -- ["<leader>yy"] = { '"+yy' },
+        -- ["<leader>p"] = { '"+p' },
         -- neotree
         ["<leader>E"] = { "<cmd>Neotree toggle buffers<cr>", desc = "Toggle Buffers Explorer" },
         -- select all
@@ -111,10 +111,10 @@ return {
         ["<C-S-J>"] = { ":m '>+1<cr>gv=gv" },
         ["<C-S-K>"] = { ":m '<-2<cr>gv=gv" },
         -- Clipboard
-        ["<leader>y"] = { '"+y' },
-        ["<leader>p"] = { '"+p' },
-        ["<C-c>"] = { '"+y' },
-        ["<C-v>"] = { '"+p' },
+        -- ["<leader>y"] = { '"+y' },
+        -- ["<leader>p"] = { '"+p' },
+        -- ["<C-c>"] = { '"+y' },
+        -- ["<C-v>"] = { '"+p' },
       },
     },
   },
